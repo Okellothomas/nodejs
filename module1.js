@@ -1,14 +1,13 @@
 /**
  * module
  */
+// import the names
+const names = require("./modulenames.js")
+const Surname = require("./modulefunction.js")
 
-let john = "John"
-let thomas = "Thomas"
-
-const Surname = (name) => {
-    console.log(`Hello ${name} how are you doing brother!`)
-}
-
+console.log(names)
 Surname("Susana")
-Surname(john)
-Surname(thomas)
+// shared
+Surname(names.john)
+Surname(names.thomas)
+
