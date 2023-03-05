@@ -11,3 +11,11 @@ if (costs < 21) {
 }
 
 console.log(`this is the one we should do come one ${costs}`)
+
+// start the operating system
+console.log("first")
+setTimeout(() => {
+    console.log("Second")
+}, 0)
+console.log("Third")
+// Complete and exited operting system. 
