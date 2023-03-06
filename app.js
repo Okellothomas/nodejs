@@ -3,19 +3,21 @@
  */
 
 const costs = 30
+const EventEmitter = require('events')
 
-if (costs < 21) {
-    console.log(`This is the one we should call for ${costs}`)
-} else {
-    console.log(`This is not the one we should do ${costs}`)
-}
+const customEmitter = new EventEmitter()
 
-console.log(`this is the one we should do come one ${costs}`)
 
-// start the operating system
-console.log("first")
-setTimeout(() => {
-    console.log("Second")
-}, 0)
-console.log("Third")
-// Complete and exited operting system. 
+customEmitter.on('response', () => {
+    console.log('data received')
+})
+
+customEmitter.on('response', () => {
+    console.log('some other logic here!..')
+})
+
+customEmitter.on('response', () => {
+    console.log('With these things we should!..')
+})
+
+customEmitter.emit('response')
